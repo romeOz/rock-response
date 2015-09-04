@@ -1,0 +1,44 @@
+{
+  "name": "romeoz/rock-response",
+  "description": "HTTP response library",
+  "keywords": [
+    "response",
+    "http"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "support": {
+    "email": "serggalka@gmail.com",
+    "issues": "https://github.com/romeOz/rock-response/issues",
+    "source": "https://github.com/romeOz/rock-response"
+  },
+  "authors": [
+    {
+      "name": "Ruslan",
+      "email": "serggalka@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "romeoz/rock-request": "*@dev",
+    "romeoz/rock-events": "*@dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.7.0"
+  },
+  "suggest": {
+    "romeoz/rock-url": "Rock URL",
+    "tackk/cartographer": "required for SitemapResponseFormatter",
+    "mibe/feedwriter": "required for RssResponseFormatter"
+  },
+  "autoload": {
+    "psr-4": {
+      "rock\\response\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.10-dev"
+    }
+  }
+}
