@@ -1,5 +1,10 @@
-HTTP response for PHP
+HTTP response library for PHP
 =================
+
+[![Build Status](https://travis-ci.org/romeOz/rock-response.svg?branch=master)](https://travis-ci.org/romeOz/rock-response)
+[![HHVM Status](http://hhvm.h4cc.de/badge/romeoz/rock-response.svg)](http://hhvm.h4cc.de/package/romeoz/rock-response)
+[![Coverage Status](https://coveralls.io/repos/romeOz/rock-response/badge.svg?branch=master)](https://coveralls.io/r/romeOz/rock-response?branch=master)
+[![License](https://poser.pugx.org/romeOz/rock-response/license.svg)](https://packagist.org/packages/romeOz/rock-response)
 
 Features
 -------------------
