@@ -12,6 +12,25 @@ Features
 -------------------
 
  * Standalone module/component for [Rock Framework](https://github.com/romeOz/rock)
+
+Installation
+-------------------
+
+From the Command Line:
+
+```
+composer require romeoz/rock-response
+```
+
+or in your composer.json:
+
+```json
+{
+ "require": {
+     "romeoz/rock-response": "*"
+ }
+}
+``` 
  
 Requirements
 -------------------
