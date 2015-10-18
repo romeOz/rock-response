@@ -20,14 +20,14 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "romeoz/rock-request": "*@dev",
-    "romeoz/rock-events": "*@dev"
+    "romeoz/rock-request": "0.11.*",
+    "romeoz/rock-events": "0.10.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.7.0"
   },
   "suggest": {
-    "romeoz/rock-url": "Rock URL",
+    "romeoz/rock-url": "required for Response::refresh()",
     "tackk/cartographer": "required for SitemapResponseFormatter",
     "mibe/feedwriter": "required for RssResponseFormatter"
   },
