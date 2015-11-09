@@ -22,7 +22,7 @@ class JsonResponseFormatter implements ResponseFormatterInterface, ObjectInterfa
      * Formats the specified response.
      * @param Response $response the response to be formatted.
      */
-    public function format($response)
+    public function format(Response $response)
     {
         if ($this->useJsonp) {
             $this->formatJsonp($response);

@@ -64,7 +64,7 @@ class RssResponseFormatter implements ResponseFormatterInterface, ObjectInterfac
      * Formats the specified response.
      * @param Response $response the response to be formatted.
      */
-    public function format($response)
+    public function format(Response $response)
     {
         $charset = $this->encoding === null ? $response->charset : $this->encoding;
         if (stripos($this->contentType, 'charset') === false) {
@@ -74,8 +74,8 @@ class RssResponseFormatter implements ResponseFormatterInterface, ObjectInterfac
 
         $data = $response->data;
 
-        if (!isset($data['language'])) {
-            $this->_feedWriter->setChannelElement('language', $response->locale);
+        if (isset($data['language'])) {
+            $this->_feedWriter->setChannelElement('language', $data['language']);
         }
         if (!isset($data['pubDate'])) {
             $this->_feedWriter->setChannelElement('pubDate', date(DATE_RSS, time()));

@@ -19,7 +19,7 @@ class HtmlResponseFormatter implements ResponseFormatterInterface, ObjectInterfa
      * Formats the specified response.
      * @param Response $response the response to be formatted.
      */
-    public function format($response)
+    public function format(Response $response)
     {
         if (stripos($this->contentType, 'charset') === false) {
             $this->contentType .= '; charset=' . $response->charset;

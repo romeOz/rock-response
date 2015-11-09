@@ -7,7 +7,6 @@ use rock\helpers\FileHelper;
 use rock\helpers\Instance;
 use rock\helpers\StringHelper;
 use rock\request\Request;
-use rock\url\Url;
 
 /**
  * The web Response class represents an HTTP response.
@@ -231,8 +230,6 @@ class Response implements EventsInterface
         510 => 'Not Extended',
         511 => 'Network Authentication Required',
     ];
-    /** @var string  */
-    public $locale = 'en';
     /**
      * @var integer the HTTP status code to send with the response.
      */
@@ -241,7 +238,10 @@ class Response implements EventsInterface
      * @var HeaderCollection
      */
     private $_headers;
-    /** @var Request|string|array */
+    /**
+     * Instance {@see \rock\request\Request}.
+     * @var Request|string|array
+     */
     public $request = 'request';
 
     /**
@@ -250,7 +250,6 @@ class Response implements EventsInterface
     public function init()
     {
         $this->request = Instance::ensure($this->request, '\rock\request\Request');
-        $this->locale = strtolower($this->locale);
 
         if ($this->version === null) {
             $this->version =
@@ -634,7 +633,7 @@ class Response implements EventsInterface
      * **Example**
      *
      * ```php
-     * Rock::$app->response->xSendFile('/home/user/Pictures/picture1.jpg');
+     * $this->response->xSendFile('/home/user/Pictures/picture1.jpg');
      * ```
      *
      * @param string $filePath file name with full path
@@ -794,12 +793,11 @@ class Response implements EventsInterface
      * return Rock::$app->response->refresh();
      * ```
      *
-     * @param array $modify
      * @return Response the response object itself
      */
-    public function refresh(array $modify = null)
+    public function refresh()
     {
-        return $this->redirect(Url::modify($modify, Url::ABS));
+        return $this->redirect('');
     }
 
     /**

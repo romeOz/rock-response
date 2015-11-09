@@ -34,7 +34,7 @@ or in your composer.json:
  
 Requirements
 -------------------
- * PHP 5.4+
+ * **PHP 5.4+**
 
 License
 -------------------

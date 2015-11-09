@@ -2,8 +2,6 @@
 
 namespace rock\response;
 
-
-
 use DOMDocument;
 use DOMElement;
 use DOMText;
@@ -41,7 +39,7 @@ class XmlResponseFormatter implements ResponseFormatterInterface, ObjectInterfac
      * Formats the specified response.
      * @param Response $response the response to be formatted.
      */
-    public function format($response)
+    public function format(Response $response)
     {
         $charset = $this->encoding === null ? $response->charset : $this->encoding;
         if (stripos($this->contentType, 'charset') === false) {
