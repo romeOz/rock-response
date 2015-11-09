@@ -10,7 +10,12 @@ HTTP response library for PHP
 
 Features
 -------------------
-
+ * Support many formatters:
+    - JSON
+    - XML
+    - RSS
+    - Sitemap
+    - HTML
  * Standalone module/component for [Rock Framework](https://github.com/romeOz/rock)
 
 Installation
@@ -34,7 +39,12 @@ or in your composer.json:
  
 Requirements
 -------------------
+
  * **PHP 5.4+**
+ * For using `SitemapResponseFormatter` required [tackk/cartographer](https://github.com/tackk/cartographer): `composer require tackk/cartographer`
+ * For using `RssResponseFormatter` required [mibe/FeedWriter](https://github.com/mibe/FeedWriter): `composer require mibe/feedwriter`
+
+>All unbolded dependencies is optional.
 
 License
 -------------------
