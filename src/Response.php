@@ -258,8 +258,18 @@ class Response implements EventsInterface
                     : '1.1';
         }
 
-        $formatters = $this->defaultFormatters();
-        $this->formatters = empty($this->formatters) ? $formatters : array_merge($formatters, $this->formatters);
+        $this->formatters = $this->defaultFormatters();
+    }
+
+    /**
+     * Adds a formatters.
+     * @param array $formatters
+     * @return $this
+     */
+    public function setFormatters(array $formatters)
+    {
+        $this->formatters = array_merge($this->formatters, $formatters);
+        return $this;
     }
 
     /**
