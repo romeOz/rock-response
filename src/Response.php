@@ -119,7 +119,7 @@ class Response implements EventsInterface
      * for creating the formatter objects.
      * @see format
      */
-    protected $formatters;
+    protected $formatters = [];
     /**
      * @var mixed the original response data. When this is not null, it will be converted into {@see \rock\response\Response::$content}
      * according to {@see \rock\response\Response::$format} when the response is being sent out.
@@ -258,7 +258,7 @@ class Response implements EventsInterface
                     : '1.1';
         }
 
-        $this->formatters = $this->defaultFormatters();
+        $this->formatters = array_merge($this->defaultFormatters(), $this->formatters);
     }
 
     /**
