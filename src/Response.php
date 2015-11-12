@@ -119,7 +119,7 @@ class Response implements EventsInterface
      * for creating the formatter objects.
      * @see format
      */
-    public $formatters;
+    protected $formatters;
     /**
      * @var mixed the original response data. When this is not null, it will be converted into {@see \rock\response\Response::$content}
      * according to {@see \rock\response\Response::$format} when the response is being sent out.
