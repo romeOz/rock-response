@@ -304,6 +304,19 @@ class Response implements EventsInterface
     }
 
     /**
+     * Returns content.
+     * @return string|array
+     */
+    public function getContent()
+    {
+        if (isset($this->content)) {
+            return $this->content;
+        }
+
+        return $this->data;
+    }
+
+    /**
      * Returns the header collection.
      *
      * The header collection contains the currently registered HTTP headers.
